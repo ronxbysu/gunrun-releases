@@ -1,0 +1,14 @@
+{
+  "releases": [
+    {
+      "name": "0.2.0 — Rigged 2.5D characters",
+      "tag": "v0.2.0",
+      "published": "2026-10-03T20:00:00Z",
+      "latest": true,
+      "prerelease": false,
+      "poster": "videos/gunrun-v0.2.0-poster.png",
+      "videos": ["videos/gunrun-v0.2.0.mp4"],
+      "notes": "## What's new\n\nThe characters are now **rigged, animated 3D models** drawn side-on over the flat 2D level, so GunRun plays exactly as before but looks like a 2.5D platformer.\n\n- **Hunter, Cyborg and Mutant** have models. Enforcer and Techrunner keep their placeholder figures for now.\n- **Animation for every move:** idle, walk, run, jump, fall, dodge roll and recovery, climb, cling, wall slide, prone, crawl, hit, stunned, death. Clips cross-fade, the climb pose holds when you stop on a ladder, and a fallen player stays down.\n- **Facing turns** over a few frames instead of snapping.\n- **Cues on the models:** Ghost Step's cloak turns the Hunter translucent, Feral Surge tints the Mutant red, and a stun pulses magenta.\n- **Your colour on the outline:** each player's model carries a rim in their colour, the same as their shots, so split-screen players can tell whose character is whose.\n- **Effects draw over the characters:** bullets, explosions and gas clouds land on the models instead of behind them.\n- Works in **single-player and split-screen**, at any window size.\n\n## Under the hood\n\n- The simulation is unchanged and still bit-deterministic for netcode: the 3D layer only reads it.\n- Models are built by a scripted Blender pipeline: decimated to about 15k triangles, 1024 px textures, under 3 MB each.\n\n## Known gaps\n\n- Clinging and room transit have no visual treatment on the models yet.\n- The Mutant's idle pose is a little wider than its hitbox.\n- Not yet measured on phone hardware."
+    }
+  ]
+}
